@@ -12,7 +12,7 @@ public class LoginServices {
         WebActionManager.setInput(LoginConstants.EMAIL_IMPUT, email);
     }
 
-    public static void ingresarContraseña(String password) {
+    public static void ingresarContrasena(String password) {
         WebActionManager.setInput(LoginConstants.PASSWORD_IMPUT,password);
     }
 
