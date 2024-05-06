@@ -25,7 +25,6 @@ public class LoginSteps extends PageSteps {
     @When("El cliente ingresa correo electronico {string}")
     public void elClienteIngresaCorreoElectronico(String email) {
         LoginServices.ingresarEmail(email);
-        
     }
 
     @When("El cliente ingresa contrasena {string}")
@@ -36,8 +35,41 @@ public class LoginSteps extends PageSteps {
     @When("El cliente hace click en el boton Log In")
     public void elClienteHaceClickEnElBotonLogIn() {
         LoginServices.clickLogin();
-
     }
 
 
+    @When ("El cliente hace click el boton Continue with email")
+    public void elClienteHaceClickElBotonContinueWithEmail() {
+        LoginServices.clickContinueWihtEmail ();
+    }
+
+    @Then("se muestra mensaje Email format is not valid")
+    public void seMuestraMensajeEmailFormat() {
+        LoginServices.seMuestraMensajeEmailFormat();
+    }
+
+    @And("ingreso codigo de confirmacion incorrecto")
+    public void ingresoCodigoDeConfirmacionIncorrecto() {
+        LoginServices.ingresarConfirmacionIncorrecto ();
+    }
+
+    @Then("se muestra mensaje That code isnt valid Please try again")
+    public void seMuestraMensajeThatCodeIsntValidPleaseTryAgain() {
+        LoginServices.seMuestraMensajeCodeNotValid ();
+    }
+
+    @When("El cliente seleciona la opcion Forgot Password")
+    public void elClienteSelecionaLaOpcionForgotPassword() {
+        LoginServices.forgotPassword ();
+    }
+
+    @When("El cliente hace click en el boton Reset Password")
+    public void elClienteHaceClickEnElBotonResetPassword() {
+        LoginServices.resetPassword ();
+    }
+
+    @Then("se muestra mensaje emergente para resetear password")
+    public void seMuestraMensajeEmergenteParaResetearPassword() {
+        LoginServices.seMuestraMensajeParaResetPassword ();
+    }
 }
