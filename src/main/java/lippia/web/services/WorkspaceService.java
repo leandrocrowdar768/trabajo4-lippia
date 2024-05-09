@@ -20,10 +20,37 @@ public class WorkspaceService {
         Thread.sleep(5000);
     }
 
-    public static void generarNombreWorkspace(String cadenaAleatoria) {
-        WebActionManager.setInput(WorkspaceConstants.WORKSPACE_NAME, cadenaAleatoria);
-
+    public static void elClienteIngresaNombreDelNuevoWorkspace() {
+        int longitud;
+        longitud = 8;
+        String gen_nombre_workspace = "";
+        for (int cont = 1; cont <= longitud; cont++) {
+            int num = (int) ((Math.random() * (('z' - 'a') + 1)) + 'a');
+            char letra = (char) num;
+            gen_nombre_workspace = gen_nombre_workspace + letra;
+        }
+        WebActionManager.setInput(WorkspaceConstants.WORKSPACE_NAME, gen_nombre_workspace);
     }
 
 
+    public static void seleccionoLaOpcionSettings() {
+        WebActionManager.click(WorkspaceConstants.SETTINGS);
+    }
+
+    public static void ingresoUnNuevoNombreDeWorkspaceEnElCampoWorkspaceName() {
+        int longitud;
+        longitud = 8;
+        String gen_nombre_workspace = "";
+        for (int cont = 1; cont <= longitud; cont++) {
+            int num = (int) ((Math.random() * (('z' - 'a') + 1)) + 'a');
+            char letra = (char) num;
+            gen_nombre_workspace = gen_nombre_workspace + letra;
+        }
+        WebActionManager.setInput(WorkspaceConstants.WORKSPACE_NAME_SETTINGS, gen_nombre_workspace);
+        WebActionManager.click(WorkspaceConstants.DESPLEGAR_WORKSPACE);
+    }
+
+    public static void seMuestraMensajeEmergenteWorkspaceSettingsHaveBeenUpdated() {
+        WebActionManager.isPresent(WorkspaceConstants.MSJ_CONFIRMACION);
+    }
 }
