@@ -1,5 +1,6 @@
-Feature: Ingreso en clockify
 @Login
+Feature: Ingreso en clockify
+
   @LoginExitoso
   Scenario: Login usuario existente
     Given El cliente esta en la pagina principal
@@ -10,7 +11,7 @@ Feature: Ingreso en clockify
     When El cliente hace click en el boton Log In
     Then El cliente verifica que esta en la pagina inicial de cliente logueado
 
-  @loginnoexitoso @Login
+  @loginnoexitoso
   Scenario: Login con email invalido
     Given El cliente esta en la pagina principal
     When El cliente hace click en Inicia la sesion

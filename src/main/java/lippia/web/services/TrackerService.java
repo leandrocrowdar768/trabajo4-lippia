@@ -18,4 +18,9 @@ public class TrackerService {
         WebActionManager.isPresent(TrackerConstants.TAGS);
         WebActionManager.isPresent(TrackerConstants.SETTINGS);
     }
+
+    public static void CerrarSesion(){
+        WebActionManager.click(TrackerConstants.USER);
+        WebActionManager.click(TrackerConstants.LOGOUT);
+    }
 }

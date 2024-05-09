@@ -12,7 +12,7 @@ public class TrackerConstants {
     public static final String TAGS = "xpath://span[contains(.,'Tags')]";
     public static final String SETTINGS = "xpath://span[contains(.,'Settings')]";
 
-    public static final String USER = "xpath://*[@id=\"topbar-menu\"]/div/div[2]/div/app-user-settings/div/a/avatar/div";
-    public static final String LOGOUT = "xpath: //A[text()=' Log out ']";
+    public static final String USER = "xpath://*[@id=\"topbar-menu\"]/div/div[2]/div/app-user-settings/div/div/a/avatar/div";
+    public static final String LOGOUT = "xpath://A[@data-cy='logout']";
 
 }
