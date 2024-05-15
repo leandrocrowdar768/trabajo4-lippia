@@ -26,8 +26,10 @@ public class ProjectServices {
 
 
         public static void elClienteHaceClickEnCreate () throws InterruptedException {
+        WebActionManager.waitPresence(ProjectConstants.CREAR_PROJECT);
+            WebActionManager.waitClickable(ProjectConstants.CREAR_PROJECT);
             WebActionManager.click(ProjectConstants.CREAR_PROJECT);
-            Thread.sleep(5000);
+//            Thread.sleep(5000);
         }
 
     public static void seMuestraMensajeDeCreacionExitosa() {
